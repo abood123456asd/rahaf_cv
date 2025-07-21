@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية - رهف حسني ال قطوع</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.1;
+        }
+        
+        .name {
+            font-family: 'Amiri', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info div {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+            padding: 40px 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .main-content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 30px;
+            height: 3px;
+            background: #764ba2;
+        }
+        
+        .sidebar .section-title {
+            color: #495057;
+            border-bottom-color: #495057;
+        }
+        
+        .sidebar .section-title::after {
+            background: #6c757d;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-right: 4px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+        
+        .skills-list li:hover {
+            transform: translateX(-5px);
+        }
+        
+        .languages-list {
+            list-style: none;
+        }
+        
+        .languages-list li {
+            background: white;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-weight: 600;
+        }
+        
+        .experience-item {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border-right: 6px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .date {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .education-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border-right: 4px solid #28a745;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .degree {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .institution {
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .gpa {
+            background: #e8f5e8;
+            color: #28a745;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .training-item {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+            border-right: 4px solid #ffc107;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .training-item strong {
+            color: #856404;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                border-right: none;
+                border-bottom: 4px solid #667eea;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">رهف حسني ال قطوع</div>
+            <div class="contact-info">
+                <div>📧 g26815182@gmail.com</div>
+                <div>📱 0779785502</div>
+                <div>📍 السلط، البلقاء</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="section">
+                    <h2 class="section-title">اللغات</h2>
+                    <ul class="languages-list">
+                        <li>🇸🇦 اللغة العربية (اللغة الأم)</li>
+                        <li>🇺🇸 اللغة الإنجليزية (جيد)</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">المهارات</h2>
+                    <ul class="skills-list">
+                        <li>التواصل والمتابعة مع الطلاب</li>
+                        <li>إيجاد الطريقة المناسبة للتدريس</li>
+                        <li>الصبر والانضباط</li>
+                        <li>المهارات التكنولوجية</li>
+                        <li>المراجعة والتحضير للمحاضرات</li>
+                        <li>الشغف والتفاؤل</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <div class="section">
+                    <h2 class="section-title">الخبرة العملية</h2>
+                    <div class="experience-item">
+                        <div class="job-title">معلمة رياض أطفال (KG1 و KG2)</div>
+                        <div class="company">🏫 روضة العيزرية</div>
+                        <div class="date">📅 9/2022 – 2025</div>
+                        <p>معلمة لجميع المواد، وخاصة اللغة الإنجليزية.</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">التعليم</h2>
+                    <div class="education-item">
+                        <div class="degree">🎓 بكالوريوس في إدارة المكتبات والمعلومات</div>
+                        <div class="institution">جامعة البلقاء التطبيقية</div>
+                        <div class="date">📅 9/2018 إلى 6/2022</div>
+                        <div class="gpa">المعدل: جيد جداً (3.32/4)</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">📚 الثانوية العامة (التوجيهي) - الفرع الأدبي</div>
+                        <div class="institution">مدرسة رقية بنت الرسول</div>
+                        <div class="date">📅 9/2017 إلى 7/2018</div>
+                        <div class="gpa">المعدل: جيد (75.4)</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">الدورات التدريبية</h2>
+                    <div class="training-item">
+                        <strong>💻 مهارات جوجل</strong><br>
+                        جامعة البلقاء التطبيقية
+                    </div>
+                    <div class="training-item">
+                        <strong>🖥️ مهارات الحاسوب</strong><br>
+                        الأكاديمية الوطنية للتدريب والتكنولوجيا، عمان
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
